@@ -4,7 +4,7 @@
 //
 //  Created by 张君泽 on 2018/3/8.
 //  Copyright © 2018年 mr_chen. All rights reserved.
-//
+//  商城首页控制器
 
 #import "FirstStoreVC.h"
 
