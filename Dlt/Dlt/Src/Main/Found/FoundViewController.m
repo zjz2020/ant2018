@@ -22,6 +22,7 @@
 #import "RCHttpTools.h"
 #import "DLTransferAccountsTableViewController.h"
 #import "DLDailyWageViewController.h"
+#import "StoreTabBarVC.h"
 #import <BMKLocationkit/BMKLocationComponent.h>
 #import <BMKLocationkit/BMKLocationAuth.h>
 #define FoundCellIdenifer @"FoundCellIdenifer"
@@ -37,6 +38,9 @@
 
 @implementation FoundViewController
 -(void)viewWillAppear:(BOOL)animated{
+    //显示tabbar
+    [self.tabBarController.tabBar setHidden:NO];
+    [self.navigationController.navigationBar setHidden:NO];
     DLTUserProfile * user = [DLTUserCenter userCenter].curUser;
     
     
@@ -236,58 +240,61 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSUInteger row = indexPath.row;
-    if (row ==0) {
-        CircleoffriendsViewController * circle = [[CircleoffriendsViewController alloc]init];
-        [self.navigationController pushViewController:circle animated:YES];
-
-    }else if (row==1 || row == 2)
-    {
-        if (_typeInt >= 10) {
-            DLTAntColonyAndNoviceGuideViewController *vc = [[DLTAntColonyAndNoviceGuideViewController alloc] initAntColonyAndNoviceGuideViewControllerWithType:(row == 1)? DLTAntColonyAndNoviceGuideTypeAntColony :DLTAntColonyAndNoviceGuideTypeNoviceGuide];
-            [self.navigationController pushViewController:vc animated:YES];
-        }else{
-            if ( row == 1) {
-                STQRCodeController *codeVC = [[STQRCodeController alloc]init];
-                codeVC.delegate = self;
-                BaseNC *navVC = [[BaseNC alloc]initWithRootViewController:codeVC];
-                [self presentViewController:navVC animated:YES completion:nil];
-            }else{
-                 if ([[NSUserDefaults standardUserDefaults] boolForKey:@"UserIsPromoter"]) {
-                [DLAlert alertShowLoad];
-                     [self bmkLocation];
-
-                 }else{
-                     DLDailyWageViewController *sdView = [DLDailyWageViewController new];
-                     sdView.URLSTR = @"daywage/applypromoter";
-                     sdView.cityCode = @"100000";
-                     [self.navigationController pushViewController:sdView animated:YES];
-                     }
-             
-
-            }
-        }
-      
-      
-    }else if (row == 3){
-      STQRCodeController *codeVC = [[STQRCodeController alloc]init];
-      codeVC.delegate = self;
-      BaseNC *navVC = [[BaseNC alloc]initWithRootViewController:codeVC];
-      [self presentViewController:navVC animated:YES completion:nil];
-   }
-    else if(row == 4){
-  //  [DLAlert alertWithText:@"该功能暂未开启"];
-        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"UserIsPromoter"]) {
-            [DLAlert alertShowLoad];
-            [self bmkLocation];
-            
-        }else{
-            DLDailyWageViewController *sdView = [DLDailyWageViewController new];
-            sdView.URLSTR = @"daywage/applypromoter";
-            sdView.cityCode = @"100000";
-            [self.navigationController pushViewController:sdView animated:YES];
-        }
-       
-    }
+    //跳转到商城
+    [self.navigationController.navigationBar setHidden:YES];
+    [self.tabBarController.tabBar setHidden:YES];
+    
+    StoreTabBarVC *storeVC = [[StoreTabBarVC alloc] init];
+    [self.navigationController pushViewController:storeVC animated:YES];
+//    if (row ==0) {
+//        CircleoffriendsViewController * circle = [[CircleoffriendsViewController alloc]init];
+//        [self.navigationController pushViewController:circle animated:YES];
+//
+//    }else if (row==1 || row == 2){
+//        if (_typeInt >= 10) {
+//            DLTAntColonyAndNoviceGuideViewController *vc = [[DLTAntColonyAndNoviceGuideViewController alloc] initAntColonyAndNoviceGuideViewControllerWithType:(row == 1)? DLTAntColonyAndNoviceGuideTypeAntColony :DLTAntColonyAndNoviceGuideTypeNoviceGuide];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }else{
+//            if ( row == 1) {
+//                STQRCodeController *codeVC = [[STQRCodeController alloc]init];
+//                codeVC.delegate = self;
+//                BaseNC *navVC = [[BaseNC alloc]initWithRootViewController:codeVC];
+//                [self presentViewController:navVC animated:YES completion:nil];
+//            }else{
+//                 if ([[NSUserDefaults standardUserDefaults] boolForKey:@"UserIsPromoter"]) {
+//                [DLAlert alertShowLoad];
+//                     [self bmkLocation];
+//
+//                 }else{
+//                     DLDailyWageViewController *sdView = [DLDailyWageViewController new];
+//                     sdView.URLSTR = @"daywage/applypromoter";
+//                     sdView.cityCode = @"100000";
+//                     [self.navigationController pushViewController:sdView animated:YES];
+//                     }
+//
+//
+//            }
+//        }
+//    }else if (row == 3){
+//      STQRCodeController *codeVC = [[STQRCodeController alloc]init];
+//      codeVC.delegate = self;
+//      BaseNC *navVC = [[BaseNC alloc]initWithRootViewController:codeVC];
+//      [self presentViewController:navVC animated:YES completion:nil];
+//   }
+//    else if(row == 4){
+//  //  [DLAlert alertWithText:@"该功能暂未开启"];
+//        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"UserIsPromoter"]) {
+//            [DLAlert alertShowLoad];
+//            [self bmkLocation];
+//
+//        }else{
+//            DLDailyWageViewController *sdView = [DLDailyWageViewController new];
+//            sdView.URLSTR = @"daywage/applypromoter";
+//            sdView.cityCode = @"100000";
+//            [self.navigationController pushViewController:sdView animated:YES];
+//        }
+//
+//    }
   
   
   

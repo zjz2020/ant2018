@@ -647,6 +647,11 @@
 		CEFC37341EC31EE20036C738 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFC37301EC31EE20036C738 /* BaseVC.m */; };
 		CEFC37351EC31EE20036C738 /* BaseNC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFC37321EC31EE20036C738 /* BaseNC.m */; };
 		CEFC37381EC31F240036C738 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFC37371EC31F240036C738 /* LoginViewController.m */; };
+		F9AE729C2050DADF00712B97 /* FirstStoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AE729B2050DADF00712B97 /* FirstStoreVC.m */; };
+		F9AE729F2050DAF400712B97 /* SecondStoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AE729E2050DAF400712B97 /* SecondStoreVC.m */; };
+		F9AE72A22050DB0E00712B97 /* ThirdStoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AE72A12050DB0E00712B97 /* ThirdStoreVC.m */; };
+		F9AE72A82050DE2000712B97 /* StoreTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AE72A72050DE2000712B97 /* StoreTabBarVC.m */; };
+		F9AE72AB20510F3F00712B97 /* StoreBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AE72AA20510F3F00712B97 /* StoreBaseVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1701,6 +1706,16 @@
 		CEFC37361EC31F240036C738 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CEFC37371EC31F240036C738 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F823B8D4D6704AE271C54577 /* Pods_Dlt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dlt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9AE729A2050DADF00712B97 /* FirstStoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstStoreVC.h; sourceTree = "<group>"; };
+		F9AE729B2050DADF00712B97 /* FirstStoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstStoreVC.m; sourceTree = "<group>"; };
+		F9AE729D2050DAF400712B97 /* SecondStoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondStoreVC.h; sourceTree = "<group>"; };
+		F9AE729E2050DAF400712B97 /* SecondStoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondStoreVC.m; sourceTree = "<group>"; };
+		F9AE72A02050DB0E00712B97 /* ThirdStoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdStoreVC.h; sourceTree = "<group>"; };
+		F9AE72A12050DB0E00712B97 /* ThirdStoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdStoreVC.m; sourceTree = "<group>"; };
+		F9AE72A62050DE2000712B97 /* StoreTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreTabBarVC.h; sourceTree = "<group>"; };
+		F9AE72A72050DE2000712B97 /* StoreTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreTabBarVC.m; sourceTree = "<group>"; };
+		F9AE72A920510F3F00712B97 /* StoreBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreBaseVC.h; sourceTree = "<group>"; };
+		F9AE72AA20510F3F00712B97 /* StoreBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreBaseVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3581,6 +3596,7 @@
 		CEFC36921EC2E4970036C738 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				F9AE72582050D65100712B97 /* Store */,
 				CE4DD2BA1F5EA55B009458D3 /* Sticker */,
 				CE8723E71EC482D5006CAD85 /* Main */,
 				CEFC36F71EC2F3FF0036C738 /* DLCode */,
@@ -3927,6 +3943,47 @@
 				CEFC37331EC31EE20036C738 /* BaseNC.h */,
 			);
 			path = "DL(基类)";
+			sourceTree = "<group>";
+		};
+		F9AE72582050D65100712B97 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				F9AE72592050D65100712B97 /* Models */,
+				F9AE725A2050D65100712B97 /* Controllers */,
+				F9AE725B2050D65100712B97 /* Views */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		F9AE72592050D65100712B97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F9AE725A2050D65100712B97 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9AE729A2050DADF00712B97 /* FirstStoreVC.h */,
+				F9AE729B2050DADF00712B97 /* FirstStoreVC.m */,
+				F9AE729D2050DAF400712B97 /* SecondStoreVC.h */,
+				F9AE729E2050DAF400712B97 /* SecondStoreVC.m */,
+				F9AE72A02050DB0E00712B97 /* ThirdStoreVC.h */,
+				F9AE72A12050DB0E00712B97 /* ThirdStoreVC.m */,
+				F9AE72A62050DE2000712B97 /* StoreTabBarVC.h */,
+				F9AE72A72050DE2000712B97 /* StoreTabBarVC.m */,
+				F9AE72A920510F3F00712B97 /* StoreBaseVC.h */,
+				F9AE72AA20510F3F00712B97 /* StoreBaseVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F9AE725B2050D65100712B97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4413,10 +4470,12 @@
 				CE372ED31FE8AF0700867BCA /* DLListStatus.m in Sources */,
 				50F052CB1EF7D90100C78F8D /* DLWithdrawalsDetailViewController.m in Sources */,
 				CE789B201EDC22E500160F99 /* CollectmoneyViewController.m in Sources */,
+				F9AE72AB20510F3F00712B97 /* StoreBaseVC.m in Sources */,
 				CE27E87B1FCD0BC0007E2FBD /* DLAdverAgreementViewController.m in Sources */,
 				CE8C6E101EC59840005D9964 /* NSBundle+STQRCodeController.m in Sources */,
 				CE27E8811FCD2568007E2FBD /* DLFindPayPwdViewController.m in Sources */,
 				CE8723F51EC48A82006CAD85 /* PersonalViewController.m in Sources */,
+				F9AE72A82050DE2000712B97 /* StoreTabBarVC.m in Sources */,
 				CE0E91861ED704C900043138 /* DPickerView.m in Sources */,
 				50471B641EE7D9C300E85603 /* DLPrivateRedPacketViewController.m in Sources */,
 				50AD42B71EFAB99C00480785 /* DLTransationRecordViewController.m in Sources */,
@@ -4512,6 +4571,7 @@
 				3221521F20118520006A6AB5 /* WSRedPacketView.m in Sources */,
 				CEE63D911FA34FF700ED882F /* FoundCell.m in Sources */,
 				CE27E87E1FCD0BF7007E2FBD /* DLDailyWageViewController.mm in Sources */,
+				F9AE72A22050DB0E00712B97 /* ThirdStoreVC.m in Sources */,
 				CE8C6F651EC9B172005D9964 /* NSMutableAttributedString+MLLabel.m in Sources */,
 				CED09FE81EEE4EFA00B643EC /* TransactionrecordsModel.m in Sources */,
 				CED09FEB1EEE52E500B643EC /* TranscationCell.m in Sources */,
@@ -4533,6 +4593,7 @@
 				50FD05FE1ED9BC3100E0CC2D /* DLSeachPeopleHeadView.m in Sources */,
 				CE8C6F691EC9B172005D9964 /* NSAttributedString+MLExpression.m in Sources */,
 				CEE63D861FA34FF700ED882F /* AntsgroupsCell.m in Sources */,
+				F9AE729C2050DADF00712B97 /* FirstStoreVC.m in Sources */,
 				CEE63D8C1FA34FF700ED882F /* SDTimeLineRefreshHeader.m in Sources */,
 				CECCE9CC1FA9671E008ACE4A /* MASViewAttribute.m in Sources */,
 				86055DC01EEAA14800B7C7B7 /* DLTRecommendModel.m in Sources */,
@@ -4690,6 +4751,7 @@
 				50EB42C01EDC5FCE001C4965 /* DLNewFriendTableViewController.m in Sources */,
 				50F108121EE5822C008CD536 /* UINavigationBar+Awesome.m in Sources */,
 				CE372ED21FE8AF0700867BCA /* DLListViewController.m in Sources */,
+				F9AE729F2050DAF400712B97 /* SecondStoreVC.m in Sources */,
 				50FD05F61ED9BC0100E0CC2D /* DLSeachGroupsCell.m in Sources */,
 				32244855200C872D001B5BB8 /* MaYiRedPacketView.m in Sources */,
 				CE8C6EEF1EC9A79E005D9964 /* SDPhotoBrowser.m in Sources */,
